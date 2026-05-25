@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/DTOI-Team-copy/',
   title: "DTOI守夜人团队",
   description: "DTOI守夜人团队官网",
   themeConfig: {
