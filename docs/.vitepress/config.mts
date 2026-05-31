@@ -5,6 +5,10 @@ export default defineConfig({
   base: '/lg-dtoi/',
   title: "DTOI守夜人团队",
   description: "DTOI守夜人团队官网",
+  head: [
+    ['link', { rel: 'icon', href: 'https://cdn.luogu.com.cn/upload/image_hosting/qer5jnsz.png' }],
+    ['link', { rel: 'shortcut icon', href: 'https://cdn.luogu.com.cn/upload/image_hosting/qer5jnsz.png' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -26,6 +30,17 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: '成员',
+        items: [
+            { text: '成员总览', link: '/users/all' },
+            { text: '管理员', link: '/users/1' },
+            { text: '开发主力', link: '/users/2' },
+            { text: '队员', link: '/users/3' },
+            { text: '疑似退役', link: '/users/4' },
+            { text: '缅怀退役', link: '/users/5' }
+        ]
       }
     ],
 
@@ -46,11 +61,26 @@ export default defineConfig({
             { text: '其他', link: '/projects/other' }
           ]
         }
+      ],
+      '/users/':
+      [
+        {
+            text: '成员',
+            link: '/users/all',
+            items: [
+                { text: '管理员', link: '/users/1' },
+                { text: '开发主力', link: '/users/2' },
+                { text: '队员', link: '/users/3' },
+                { text: '疑似退役', link: '/users/4' },
+                { text: '缅怀退役', link: '/users/5' }
+            ]
+        }
       ]
     },
 
     socialLinks: [
-      { icon: 'luogu', link: 'https://www.luogu.com.cn/team/118648' }
+      { icon: 'luogu', link: 'https://www.luogu.com.cn/team/118648' },
+      { icon: 'github', link: 'https://github.com/politetrex/lg-dtoi' }
     ]
   }
 })
